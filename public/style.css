@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px; 
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  color: #FFE066;
+  text-shadow: 1px 2px 5px #FFBF00;
+  background-color: #60e4ff;
+}
+
+.list {
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  list-style: none;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+}
+
+.name {
+  font-size: 60px;
+  display: inline-block;
+  color: #FFE066;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  text-shadow: 1px 5px 6px #dba400;
+  margin-left: 20px;
+}
+
+.date {
+  font-size: 30px; 
+  text-decoration: none;
+  display: inline-block;
+  color: #FF353C;
+  text-shadow: 1px 5px 6px #cc2b30;
+  padding-bottom: 11px;
+  margin-left: 10px;
+}
+
+.content {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.btns {
+  margin-top: 10px;
+  display: flex;
+  justify-self: center;
+  background-color: #60e4ff;
+  color: white;
+  border-color: #60e4ff;
+  margin-left: 115px;
+  cursor: pointer;
+  box-shadow: 1px 8px 8px grey;
+}
+
+.btns:hover {
+  background-color: #FF353C;
+  transition: cubic-bezier(1, 0, 0, 1) all 0.3s;
+  transform: scale(1.1);
+  color: white;
+  box-shadow: 1px 5px 15px grey;
+}
+
+form {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  list-style: none;
+}
+
+p {
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  list-style: none;
+}
+
+.time {
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  list-style: none;
+  display: inline;
+  color: #FF353C;
+  text-shadow: 1px 5px 6px #cc2b30;
+  font-size: 20px;
+}
+footer{
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  list-style: none;
+  display: inline;
+  color: #00d5ff;
+  text-shadow: 1px 5px 6px #626262;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 20px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768 pixels */
+  header {
+      font-size: 60px;
+  }
+
+  .name {
+      font-size: 40px;
+  }
+
+  .date {
+      font-size: 20px;
+  }
+
+  .content {
+      margin-left: 10px;
+  }
+
+  .btns {
+      margin-left: 20px;
+  }
+
+  form {
+      width: 70%;
+  }
+}
+
+form label{
+  text-shadow: 1px 5px 3px rgb(160, 160, 160);
+}
