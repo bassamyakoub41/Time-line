@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const routes = require ('./config/routes')
 const mongoose= require('./config/mongoose');
+const session = require('express-session');
 require("dotenv").config()
-
 
 app.set('view engine','ejs')
 app.use(express.json());
