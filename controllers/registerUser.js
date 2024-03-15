@@ -53,9 +53,12 @@ const signUp = async (req, res) => {
           if(!isCorrect){
             res.render('register' , {logErr: 'Password is not correct' , err:''})
         }else{
-          const token = jwt.sign({ userId: user._id }, secret);
+          const userInfo = {
+            username: user.username,
+            email: user.email,
+          };
+          const token = jwt.sign({ userInfo }, secret);
           res.cookie('token', token, { maxAge: 3600000 });
-          // res.render('posts', { username: user.username , Msg:'' });
           res.redirect ("/")
         }
     }
