@@ -55,15 +55,21 @@ const signUp = async (req, res) => {
         }else{
           const token = jwt.sign({ userId: user._id }, secret);
           res.cookie('token', token, { maxAge: 3600000 });
-          res.render('posts', { username: user.username });
+          // res.render('posts', { username: user.username , Msg:'' });
+          res.redirect ("/")
         }
     }
   }
 }
+const logOut = (req, res) => {
+  res.clearCookie("token");
+  res.redirect("/register");
+};
 
 
 module.exports = {
   getRegisterPage,
   signUp,
   login,
+  logOut,
 };

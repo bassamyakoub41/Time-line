@@ -137,3 +137,20 @@ footer{
 form label{
   text-shadow: 1px 5px 3px rgb(160, 160, 160);
 }
+
+.logOut {
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}

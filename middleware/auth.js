@@ -1,12 +1,12 @@
 const jwt  = require ("jsonwebtoken")
-require("dotenv").config()
-const secret = process.env.SECRET;
+const dotenv = require("dotenv")
+dotenv.config()
 
 const checkUserLogin = (req , res , next) => {
-    const token = req.cookies.token
-    
-    if(token){
-    jwt.verify(token , secret , function(){
+  const token = req.cookies.token
+  const secret = process.env.SECRET
+  if(token){
+    jwt.verify(token , secret , function(err, decoded){
         if(err){
             console.log('' , err)
             res.redirect('/register');
@@ -15,11 +15,12 @@ const checkUserLogin = (req , res , next) => {
             next();
         }
     });
-    }else{
-        res.redirect('/register' , {err:'' , logErr:''})
-    }
-
+  }else{
+    res.redirect('/register' , {err:'' , logErr:''})
+  }
 }
+
+
 
 module.exports = {
     checkUserLogin

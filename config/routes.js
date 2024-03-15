@@ -10,5 +10,6 @@ router.get('/',middleware.checkUserLogin,controller.getAllMessages)
 router.post('/comments/:id',middleware.checkUserLogin, controller.comments);
 router.get ('/register',registerUser.getRegisterPage);
 router.post ('/sign-up', registerUser.signUp);
-router.post('/log-in' , registerUser.login)
+router.post('/log-in' , registerUser.login);
+router.get("/logOut", registerUser.logOut)
 module.exports = router;
