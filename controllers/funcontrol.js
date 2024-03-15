@@ -28,13 +28,15 @@ const message= async (req , res)=>{
 
 const getAllMessages = async (req, res) => {
   try {
-      const allMessages = await Message.find().sort({ createdAt: -1 }).populate('comments');
-      res.render('posts', { Msg: allMessages ,post: data });
+    const allMessages = await Message.find().sort({ createdAt: -1 }).populate('comments');
+    const user = req.user ? req.user : null; 
+    res.render('posts', { Msg: allMessages, post: data, user: user });
   } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
+    console.error(error);
+    res.status(500).send('Internal Server Error');
   }
 };
+
 
 const comments = async (req, res) => {
   const { id } = req.params;

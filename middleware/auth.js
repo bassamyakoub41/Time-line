@@ -11,7 +11,8 @@ const checkUserLogin = (req , res , next) => {
             console.log('' , err)
             res.redirect('/register');
         }else{
-            req.user = decoded;
+          res.locals.username = decoded.userInfo.username;
+          console.log(decoded.userInfo.username);
             next();
         }
     });
