@@ -15,6 +15,10 @@
 </head>
 <body>
   <header>TIME LINE</header>
+  <button class="btn btn-warning btns  logOut">
+    <a href="/logOut">LogOut</a>
+</button>
+
 
   <form action="/" method="post"> 
     <label for="name">Name</label>
@@ -29,6 +33,7 @@
       <h1 class="name timename"><%= item.name%></h1>
       <p class="time"><%= item.createdAt %></p>
       <p class="content"><%=item.message%></p>
+
 
       <!-- Form to add comments -->
       <form action="/comments/<%= item._id %>" method="post">
